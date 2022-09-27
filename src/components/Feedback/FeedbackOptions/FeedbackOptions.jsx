@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyledButton, StyledButtonContainer } from './FeedbackOptions.styled';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
