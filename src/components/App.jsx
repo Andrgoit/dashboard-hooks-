@@ -8,7 +8,7 @@ import ThemeButton from './Header/ThemeButton/ThemeButton';
 import PhoneBook from './PhoneBook/PhoneBook';
 import Feedback from './Feedback/Feedback';
 import Videoplayer from './Videoplayer/Videoplayer';
-// import Reader from './Reader/Reader';
+import Reader from './Reader/Reader';
 // import ImageFinder from './ImageFinder/ImageFinder';
 // import EmailButton from 'components/Header/EmailButton/EmailButton';
 // import NotificationButton from './Header/NotificationButton/NotificationButton';
@@ -86,9 +86,9 @@ export class App extends Component {
             <Box width="70%" p={4} display="block">
               <Videoplayer />
             </Box>
-            {/* <Box width="50%" p={4} display="block">
+            <Box width="50%" p={4} display="block">
               <Reader />
-            </Box> */}
+            </Box>
           </Box>
         </Box>
       </Box>

@@ -6,7 +6,7 @@ const ProgressBar = ({ total, index }) => {
       <StyledProgress>
         Статья {index} из {total}
       </StyledProgress>
-      <input type="range" control="none" value={index} min="1" max={total} />
+      {/* <input type="range" control="none" value={index} min="1" max={total} /> */}
     </StyledContainer>
   );
 };
