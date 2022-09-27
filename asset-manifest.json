@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dashboard-hooks-/static/css/main.aa142804.css",
+    "main.js": "/dashboard-hooks-/static/js/main.0de937e4.js",
+    "index.html": "/dashboard-hooks-/index.html",
+    "main.aa142804.css.map": "/dashboard-hooks-/static/css/main.aa142804.css.map",
+    "main.0de937e4.js.map": "/dashboard-hooks-/static/js/main.0de937e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa142804.css",
+    "static/js/main.0de937e4.js"
+  ]
+}
