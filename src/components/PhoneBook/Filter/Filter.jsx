@@ -1,6 +1,6 @@
-import { StyledInput, StyledForm } from './SearchForm.styled';
+import { StyledInput, StyledForm } from './Filter.styled';
 
-const SearchForm = ({ filter, onChange }) => {
+const Filter = ({ filter, onChange }) => {
   return (
     <StyledForm action="#">
       <StyledInput
@@ -13,4 +13,4 @@ const SearchForm = ({ filter, onChange }) => {
   );
 };
 
-export default SearchForm;
+export default Filter;

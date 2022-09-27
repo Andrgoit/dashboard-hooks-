@@ -3,17 +3,17 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Box } from './Box';
 
-// import Header from './Header/Header';
 import GreetBlock from './Header/GreetBlock/GreetBlock';
-// import EmailButton from 'components/Header/EmailButton/EmailButton';
-// import NotificationButton from './Header/NotificationButton/NotificationButton';
-// import SettingsButton from './Header/SettingsButton/SettingsButton';
 import ThemeButton from './Header/ThemeButton/ThemeButton';
-// import ImageFinder from './ImageFinder/ImageFinder';
 import PhoneBook from './PhoneBook/PhoneBook';
 import Feedback from './Feedback/Feedback';
 import Videoplayer from './Videoplayer/Videoplayer';
-import Reader from './Reader/Reader';
+// import Reader from './Reader/Reader';
+// import ImageFinder from './ImageFinder/ImageFinder';
+// import EmailButton from 'components/Header/EmailButton/EmailButton';
+// import NotificationButton from './Header/NotificationButton/NotificationButton';
+// import SettingsButton from './Header/SettingsButton/SettingsButton';
+// import Header from './Header/Header';
 
 export class App extends Component {
   state = {
@@ -86,9 +86,9 @@ export class App extends Component {
             <Box width="70%" p={4} display="block">
               <Videoplayer />
             </Box>
-            <Box width="50%" p={4} display="block">
+            {/* <Box width="50%" p={4} display="block">
               <Reader />
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>

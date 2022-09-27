@@ -6,7 +6,7 @@ import PhoneBookSection from './PhoneBookSection/PhoneBookSection';
 import ContactForm from './ContactForm/ContactForm';
 import Contacts from './Contacts/Contacts';
 import PhoneBookButton from './PhoneBookButton/PhoneBookButton';
-import SearchForm from './SearchForm/SearchForm';
+import Filter from './Filter/Filter';
 
 const KEY = 'contacts';
 
@@ -38,7 +38,7 @@ const PhoneBook = () => {
     );
 
     if (checkForDublicate) {
-      return toast.info('Такое имя контакта уже существует');
+      return toast.info(`${data.name} is already in contacts`);
     }
     setContacts(prevState => [...prevState, data]);
   };
@@ -49,7 +49,7 @@ const PhoneBook = () => {
 
   const searchContact = event => {
     const { value } = event.target;
-    console.log(value);
+
     setFilter(value);
   };
 
@@ -78,7 +78,7 @@ const PhoneBook = () => {
           {contacts.length >= 1 && (
             <>
               <PhoneBookSection title="Search...">
-                <SearchForm onChange={searchContact} filter={filter} />
+                <Filter onChange={searchContact} filter={filter} />
               </PhoneBookSection>
               <PhoneBookSection title="Contacts">
                 <Contacts
