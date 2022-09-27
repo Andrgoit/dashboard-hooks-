@@ -8,8 +8,10 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledInput = styled.input`
+  width: 200px;
   padding: 10px;
   border: none;
   border-radius: 4px;
   color: #000;
+  outline: none;
 `;

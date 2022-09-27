@@ -14,7 +14,6 @@ import PhoneBook from './PhoneBook/PhoneBook';
 import Feedback from './Feedback/Feedback';
 import Videoplayer from './Videoplayer/Videoplayer';
 import Reader from './Reader/Reader';
-// import Aside from './Aside/Aside';
 
 export class App extends Component {
   state = {
@@ -53,9 +52,10 @@ export class App extends Component {
           draggable
           pauseOnHover
         />
-        {/* <Aside /> */}
-        <Box ml={4} width="100%">
+
+        <Box width="100%">
           <Box
+            as="header"
             display="flex"
             alignItems="center"
             justifyContent="space-between"
@@ -64,14 +64,7 @@ export class App extends Component {
             <GreetBlock name={name} darkTheme={darkTheme} />
 
             <Box display="flex" gridGap={4}>
-              {/* <EmailButton email={email} darkTheme={darkTheme} /> */}
-              {/* <NotificationButton */}
-              {/* notification={notification} */}
-              {/* darkTheme={darkTheme} */}
-              {/* /> */}
-              {/* <SettingsButton darkTheme={darkTheme} /> */}
               <ThemeButton darkTheme={darkTheme} onClick={this.changeTheme} />
-              {/* <ProfileButton /> */}
             </Box>
           </Box>
           <Box
@@ -84,10 +77,10 @@ export class App extends Component {
             {/* <Box width="70%" p={4} mb={5} display="block">
               <ImageFinder />
             </Box> */}
-            <Box width="25%" p={4}>
+            <Box width="300px">
               <PhoneBook />
             </Box>
-            <Box width="25%" p={4} display="block">
+            <Box width="300px" display="block">
               <Feedback />
             </Box>
             <Box width="70%" p={4} display="block">
