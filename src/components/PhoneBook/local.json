@@ -1,0 +1,31 @@
+{
+  "phone_title": {
+    "en": "Phonebook",
+    "ru": "Телефонная книга"
+  },
+
+  "nameUser": {
+    "en": "Name",
+    "ru": "Имя контакта"
+  },
+
+  "numberUser": {
+    "en": "Number",
+    "ru": "Номер контакта"
+  },
+
+  "add": {
+    "en": "Add contact",
+    "ru": "Добавить контакт"
+  },
+
+  "search_title": {
+    "en": "Search by name",
+    "ru": "Поиск по имени"
+  },
+
+  "contacts_title": {
+    "en": "Contacts",
+    "ru": "Контакты"
+  }
+}

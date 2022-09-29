@@ -9,6 +9,7 @@ import PhoneBook from './PhoneBook/PhoneBook';
 import Feedback from './Feedback/Feedback';
 import Videoplayer from './Videoplayer/Videoplayer';
 import Reader from './Reader/Reader';
+import LangSwitcher from './LangSwitcher/LangSwitcher';
 // import ImageFinder from './ImageFinder/ImageFinder';
 // import EmailButton from 'components/Header/EmailButton/EmailButton';
 // import NotificationButton from './Header/NotificationButton/NotificationButton';
@@ -63,7 +64,8 @@ export class App extends Component {
           >
             <GreetBlock name={name} darkTheme={darkTheme} />
 
-            <Box display="flex" gridGap={4}>
+            <Box display="flex" gridGap={4} alignItems="center">
+              <LangSwitcher />
               <ThemeButton darkTheme={darkTheme} onClick={this.changeTheme} />
             </Box>
           </Box>

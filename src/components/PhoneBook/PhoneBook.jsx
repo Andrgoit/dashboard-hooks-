@@ -8,6 +8,13 @@ import Contacts from './Contacts/Contacts';
 import PhoneBookButton from './PhoneBookButton/PhoneBookButton';
 import Filter from './Filter/Filter';
 
+// localization
+import { useContext } from 'react';
+import { langContext } from 'LangContext';
+import locale from 'components/PhoneBook/local.json';
+const { phone_title, search_title, contacts_title } = locale;
+//end localization
+
 const KEY = 'contacts';
 
 const defaultContact = [
@@ -23,6 +30,8 @@ const PhoneBook = () => {
   });
   const [filter, setFilter] = useState('');
   const [isOpenPhoneBook, setIsOpenPhoneBook] = useState(true);
+
+  const { lang } = useContext(langContext);
 
   useEffect(() => {
     localStorage.setItem(KEY, JSON.stringify(contacts));
@@ -72,15 +81,15 @@ const PhoneBook = () => {
           minHeight="240px"
           bg="phoneBook.bgContainer"
         >
-          <PhoneBookSection title="Phonebook">
+          <PhoneBookSection title={phone_title[lang]}>
             <ContactForm onSubmit={addContacts} />
           </PhoneBookSection>
           {contacts.length >= 1 && (
             <>
-              <PhoneBookSection title="Search...">
+              <PhoneBookSection title={search_title[lang]}>
                 <Filter onChange={searchContact} filter={filter} />
               </PhoneBookSection>
-              <PhoneBookSection title="Contacts">
+              <PhoneBookSection title={contacts_title[lang]}>
                 <Contacts
                   contacts={filteredContacts}
                   onClick={deleteContacts}

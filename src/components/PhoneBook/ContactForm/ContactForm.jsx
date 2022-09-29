@@ -7,9 +7,16 @@ import {
   StyledButton,
 } from './ContactForm.styled';
 
+import { useContext } from 'react';
+import { langContext } from 'LangContext';
+import locale from 'components/PhoneBook/local.json';
+
+const { nameUser, numberUser, add } = locale;
+
 const ContactForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  const { lang } = useContext(langContext);
 
   const handlerSubmitForm = e => {
     const id = nanoid();
@@ -43,7 +50,7 @@ const ContactForm = ({ onSubmit }) => {
   return (
     <>
       <StyledForm onSubmit={handlerSubmitForm}>
-        <Styledlabel htmlFor="name">Name</Styledlabel>
+        <Styledlabel htmlFor="name">{nameUser[lang]}</Styledlabel>
         <StyledInput
           onChange={handlerChange}
           type="text"
@@ -54,7 +61,7 @@ const ContactForm = ({ onSubmit }) => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-        <Styledlabel htmlFor="number">Number</Styledlabel>
+        <Styledlabel htmlFor="number">{numberUser[lang]}</Styledlabel>
         <StyledInput
           type="tel"
           onChange={handlerChange}
@@ -65,7 +72,7 @@ const ContactForm = ({ onSubmit }) => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-        <StyledButton type="submit">Add contact</StyledButton>
+        <StyledButton type="submit">{add[lang]}</StyledButton>
       </StyledForm>
     </>
   );
